@@ -17,4 +17,5 @@ public interface RMIServer extends Remote {
     public void stop() throws RemoteException;
     public void decryptFile(byte[] file, String key) throws RemoteException;
     public void CrackFileAndGetKey(byte[] file, String checksum);
+    
 }
