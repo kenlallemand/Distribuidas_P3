@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public interface RMINode extends Remote{
     
-    public String stop() throws RemoteException;   
+    public void stop() throws RemoteException;   
     public byte[] DecryptFile(String fileName,byte[] fileBytes,String key) throws RemoteException;
-    public String CrackFileAndFindKey(ArrayList keys, byte[] inputFile,String checkSum) throws RemoteException;
+    public String CrackFileAndFindKey(ArrayList keys, byte[] inputFile, byte[] outputFile, String checkSum) throws RemoteException;
 }

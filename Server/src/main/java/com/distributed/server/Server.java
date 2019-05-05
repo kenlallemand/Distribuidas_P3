@@ -5,7 +5,7 @@
  */
 package com.distributed.server;
 
-import com.distributed.utlilities.RMIServer;
+import com.distributed.utilities.RMIServer;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
