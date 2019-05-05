@@ -7,6 +7,7 @@ package com.distributed.server;
 
 import com.distributed.utlilities.RMIServer;
 import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
  *
  * @author kenla
  */
-public class Server {
+public class Server implements RMIServer{
     
     ArrayList<String> slaves = new ArrayList();
     /**
@@ -34,6 +35,26 @@ public class Server {
         }catch (Exception ex) {
             System.err.println(ex);
         }
+    }
+
+    @Override
+    public int nodos(String ip) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void stop() throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void decryptFile(byte[] file, String key) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void CrackFileAndGetKey(byte[] file, String checksum) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

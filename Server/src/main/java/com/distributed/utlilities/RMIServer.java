@@ -14,4 +14,7 @@ import java.rmi.RemoteException;
  */
 public interface RMIServer extends Remote {
      public int nodos(String ip) throws RemoteException;
+     public void stop() throws RemoteException;
+     public void decryptFile(byte[] file, String key) throws RemoteException;
+     public void CrackFileAndGetKey(byte[] file, String checksum);
 }
